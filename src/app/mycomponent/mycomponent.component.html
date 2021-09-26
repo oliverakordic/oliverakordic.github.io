@@ -1,1 +1,27 @@
-<p>mycomponent works, hopefully! :)</p>
+<form [formGroup]="myForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-field">
+        <mat-form-field appearance="fill" formControlName="name" name="name">
+            <mat-label>{{myForm.controls['name'].value}}</mat-label>
+            <input matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>{{myForm.controls['selectedOption'].value}}</mat-label>
+            <mat-select formControlName="selectedOption" name="selectedOption">
+                <mat-option *ngFor="let option of availableOptions" value="option">{{option}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" formControlName="description" name="description">
+            <mat-label>{{myForm.controls['description'].value}}</mat-label>
+            <textarea matInput></textarea>
+        </mat-form-field>
+    </div>
+
+    <span class="text-small">1</span>
+    <mat-slider min="1" max="100" formControlName="points" step="10"></mat-slider>
+    <span class="text-small">100</span>
+
+    <br />
+    <button mat-raised-button>Submit</button>
+</form>
