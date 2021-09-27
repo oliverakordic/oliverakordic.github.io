@@ -1,8 +1,25 @@
-.form-field {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+// .form-field {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+// }
+
+
+.container{
+  text-align: center;
+  margin: 200px;
 }
-.slider{
-  display:inline-flex;
+
+.form-container{
+  width: 200 px;
+  margin: 0 px auto;
+}
+
+.form-field{
+  display: block
+}
+
+.submitButton{
+  width: 700px!important;
+  min-width: unset!important;
 }

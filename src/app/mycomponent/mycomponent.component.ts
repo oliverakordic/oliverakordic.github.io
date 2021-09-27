@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'app-mycomponent',
@@ -9,35 +10,28 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 export class MycomponentComponent implements OnInit {
 
   availableOptions: string[] = ['first', 'second', 'third'];
-
-  myForm: FormGroup = new FormGroup({
-    name: new FormControl('Your name'),
-    selectedOption: new FormControl(this.availableOptions[2]),
-    description: new FormControl('Write your description...'),
-    points: new FormControl(30)
-  });
+  myForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { 
-    this.myForm = this.formBuilder.group({
-      name: 'Your name',
-      selectedOption: this.availableOptions[2],
-      description: 'Write your description...',
-      points: 30
-    });
+      this.myForm = this.formBuilder.group({
+      name: new FormControl(),
+      selectedOption: new FormControl(),
+      description: new FormControl(),
+      points: new FormControl(40)
+    })
   }
 
   ngOnInit(): void {
-    // this.myForm = this.formBuilder.group({
-    //   name: 'olja',
-    //   selectedOption: 'third',
-    //   description: 'lalala',
-    //   points: 30
-    // })
+
   }
   
-  onFormSubmit(){
-    console.log('hello! :) Name: '+this.myForm.controls['name'].value+
-    ' Option: '+this.myForm.controls['selectedOption'].value+' Description: '+this.myForm.controls['description'].value+' Points: '+
-    this.myForm.controls['points'].value);
+  submit(){
+    console.log(this.myForm.value);
+  }
+
+  selected(event:MatSelectChange){
+    let selectedData = {
+      value: event.value
+    };
   }
 }
