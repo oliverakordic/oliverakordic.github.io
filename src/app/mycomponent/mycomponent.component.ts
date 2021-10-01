@@ -34,4 +34,8 @@ export class MycomponentComponent implements OnInit {
       value: event.value
     };
   }
+
+  onCardsView() {
+    console.log("Open Cards View");
+  }
 }
