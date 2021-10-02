@@ -35,7 +35,7 @@ export class MycomponentComponent implements OnInit {
     };
   }
 
-  onCardsView() {
-    console.log("Open Cards View");
-  }
+  // onCardsView() {
+  //   console.log("Open Cards View");
+  // }
 }

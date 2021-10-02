@@ -1,24 +1,14 @@
 .container{
   text-align: center;
-  margin-top: 50px;
-}
-
-.form-container{
-  width: 200 px;
-  margin: 0 px auto;
+  margin-top: 20pt;
 }
 
 .form-field{
   display: block
 }
 
-//inheritance in css: form-btn--cards inherits form-btn
 .form-btn{
   width: 70%;
   min-width: unset!important;
   margin-top: 10pt;
-}
-.form-btn--cards {
-  @extend .form-btn;
-  background-color: aliceblue;
 }

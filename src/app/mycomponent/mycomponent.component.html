@@ -1,23 +1,22 @@
 <div class="container">
-    <div class="form-container">
         <form [formGroup]="myForm" (submit)="submit()">
 
-                <mat-form-field class="form-field" appearance="fill">
-                    <mat-label>Name</mat-label>
-                    <input matInput formControlName="name">
-                </mat-form-field>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
 
-                <mat-form-field class="form-field" appearance="fill">
-                    <mat-label>Option</mat-label>
-                    <mat-select formControlName="selectedOption" (selectionChange)="selected($event)">
-                        <mat-option *ngFor="let option of availableOptions" [value]="option">{{option}}</mat-option>
-                    </mat-select>
-                </mat-form-field>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Option</mat-label>
+                <mat-select formControlName="selectedOption" (selectionChange)="selected($event)">
+                    <mat-option *ngFor="let option of availableOptions" [value]="option">{{option}}</mat-option>
+                </mat-select>
+            </mat-form-field>
 
-                <mat-form-field class="form-field" appearance="fill">
-                    <mat-label>Description</mat-label>
-                    <textarea matInput formControlName="description"></textarea>
-                </mat-form-field>
+            <mat-form-field class="form-field" appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
 
             <span>1</span>
             <mat-slider min="0" max="100" formControlName="points" step="20"></mat-slider>
@@ -26,6 +25,4 @@
             <br />
             <button mat-raised-button class="form-btn" type="submit">Submit</button>
         </form>
-        <button mat-raised-button class="form-btn--cards" (click)="onCardsView()">Cards View</button>
-    </div>
 </div>
