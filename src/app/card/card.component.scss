@@ -1,17 +1,15 @@
-.card-component {
-    margin: 100px;
-    display: flex;
-    // max-width: 500pt;
-}
-.mat-card {
-    margin: 5pt;
-    width: 50%;
-}
 .mat-button {
     background-color: #77CC66;
-    width: 100%;
+    width: 90%;
+    position: absolute;
+    right: 5%;
+    bottom: 10pt;
 }
-.mat-card-actions{
-    display:flex;
-    margin-bottom: 0%;
+.card-dimensions{
+    width: 25rem;
+    height: 15rem;
+}
+.scroll {
+    max-height: 7.9rem;
+    overflow-y: auto;
 }
